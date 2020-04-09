@@ -9,29 +9,34 @@ public class Student {
 
 
     String name;
+
     public Student(String name) {
     }
+
     public Object getName() {
         return name;
     }
 
     //    grades is an ArrayList that contains a list of Integer numbers.
 
-    public void addGrades(){
+    public void addGrades(int i) {
         Integer grade = null;
         grades.add(grade);
     }
+
     private ArrayList<Integer> grades = new ArrayList<>();
+
     public Student(ArrayList<Integer> grades) {
         this.grades = grades;
     }
 
-    public int getAverage(){
+    public int getAverage() {
         int addedGrades = 0;
         int numberOfGrades = 0;
-        for(int i = 0; i < grades.size();i++){
-            numberOfGrades ++;
-            addedGrades += i; ;
+        for (int i = 0; i < grades.size(); i++) {
+            numberOfGrades++;
+            addedGrades += i;
+            ;
         }
         return addedGrades / numberOfGrades;
     }
@@ -49,6 +54,7 @@ public class Student {
     public long getId() {
         return id;
     }
-
-
 }
+
+//public void deleteGrade(int index, )
+//}

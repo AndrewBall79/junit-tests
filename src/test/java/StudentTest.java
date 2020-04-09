@@ -3,23 +3,39 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StudentTest {
-        Student student1 = new Student("gory");
-        Student student2 = new Student();
-        Student student3 = new Student();
+    Student student1;
+@Before
+public void setUp(){
+    student1 = new Student("gory");
+
+}
+//@Test
+//public void tstCountIsWorking(){
+//    long expected = Student.getCount();
+//    Student s2 = new Student();
+//    assertEquals(expected, Student.getCount());
+//}
+
+
     @Test
-    public void getStudentId(){
+    public void testGetId(){
         assertEquals(0, student1.getId());
-        assertEquals(1, student2.getId());
-        assertEquals(2, student3.getId());
+        assertNotNull(student1.getId());
     }
 
     @Test
-    public void getStudentName(){
+    public void testGetName(){
         assertEquals("gory", student1.getName());
     }
 
     @Test
-    public void testAddStudentGrade(){
-        student1.addGrades();
+    public void testAddGrade(){
+        assertEquals(98, student1.getAverage());
+    }
+
+    @Test
+    public void testGetGradeAverage(){
+        assertEquals(98, student1.getAverage());
+
     }
 }
